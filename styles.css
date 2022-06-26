@@ -1,0 +1,96 @@
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white--p: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Lexend Deca', sans-serif;
+}
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+}
+body{
+    background-color: var(--very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card-wrapper{
+    margin: 4rem 0;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+.card{
+    padding: 2rem;
+    padding-bottom: 0;
+    max-width: 350px;
+}
+.card h1{
+    margin: 1rem 0;
+    color: var(--very-light-gray);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+}
+.card p{
+    color: var(--transparent-white--p);
+    font-size: 15px;
+    padding-right: 1rem;
+    word-wrap: break-word;
+}
+.card:nth-child(1){
+    border-radius: 20px 20px 0 0;
+}
+.card:nth-child(3){
+    border-radius: 0 0 20px 20px;
+}
+.left, .btn-left:hover{
+    background-color: var(--bright-orange);
+}
+.mid, .btn-mid:hover{
+    background-color: var(--dark-cyan);
+}
+.right, .btn-right:hover{
+    background-color: var(--very-dark-cyan);
+}
+.btn{
+    margin: 3rem 0;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn-left{
+    color: var(--bright-orange);
+}
+.btn-mid{
+    color: var(--dark-cyan);
+}
+.btn-right{
+    color: var(--very-dark-cyan);
+}
+.btn-left:hover, .btn-mid:hover, .btn-right:hover{
+    color: var(--very-light-gray);
+    border: 1px solid var(--very-light-gray);
+}
+@media screen and (min-width: 1050px) {
+    .card-wrapper{
+        grid-template-columns: repeat(3, 1fr);
+        width: 80vw;
+    }
+    .card:nth-child(1){
+        border-radius: 20px 0 0 20px;
+    }
+    .card:nth-child(3){
+        border-radius: 0 20px 20px 0;
+    }
+}
