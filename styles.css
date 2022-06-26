@@ -84,6 +84,8 @@ body{
 }
 @media screen and (min-width: 1050px) {
     .card-wrapper{
+        margin: 5rem auto;
+        margin-left: 0.5rem;
         grid-template-columns: repeat(3, 1fr);
     }
     .card:nth-child(1){
