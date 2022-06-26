@@ -85,7 +85,6 @@ body{
 @media screen and (min-width: 1050px) {
     .card-wrapper{
         grid-template-columns: repeat(3, 1fr);
-        width: 80vw;
     }
     .card:nth-child(1){
         border-radius: 20px 0 0 20px;
